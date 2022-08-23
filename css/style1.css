@@ -1,0 +1,229 @@
+:root{
+    --main-color:#8e44ad;
+    --black:#222;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,.7);
+    --light-bg:#eee;
+    --border:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    height: 2000px;
+}
+/* -------------header style start------------------- */
+header{
+    width: 100%;
+    height: 80vh;
+    background: url(../images/home-slide-1.jpg) no-repeat center/cover;
+   
+}
+
+header nav{
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    justify-content:space-around;
+    position: fixed;
+    z-index: 999;
+    box-shadow: var(--box-shadow);
+}
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:var(--black);
+    display: none;
+    line-height: 70px;
+    float: right;
+    margin-right: 30px;
+ }
+header nav ul{
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+header nav ul li{
+    list-style: none;
+    padding:8px 10px;
+    
+}
+header nav a{
+    text-decoration: none;
+    color: var(--light-black);
+    font-size: 2rem;
+    color: var(--black);
+}
+.logo{
+    margin-top: 2rem;
+}
+header nav a:hover{
+    color: var(--main-color);
+}
+header nav ul li a:hover{
+    padding-bottom: .3rem;
+    border-bottom: .2rem solid var(--main-color);
+}
+ .hed_btn{
+    /* z-index: 0; */
+   background: var(--black);
+}
+.hed_btn:hover {
+    background-color: var(--main-color);
+    color: var(--white);
+} 
+
+/* --------service section starts--------- */
+.services .img_container .img_box{
+    background-color: var(--main-color);
+    width: 15rem;
+    height: 15rem;
+
+}
+.services .img_container .img_box:hover{
+    background: var(--black);
+}
+
+.row_div{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 68px;
+}
+.row_div .image{
+    width: 50rem;
+    height: 40rem;
+}
+.row_div .card_body{
+    flex:1 1 41rem;
+    padding:3rem;
+    background: var(--light-bg);
+}
+
+.row_div .card_body h2{
+    font-size: 3rem;
+    color:var(--black);
+   
+ }
+ 
+ .row_div .card_body p{
+    font-size: 1.5rem;
+    padding:1rem 0;
+    line-height: 2;
+    color:var(--black);
+ }
+/* --------service section end--------- */
+
+
+footer .box a{
+    display: block;
+    text-decoration: none;
+    color:rgb(201, 198, 198) ;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+footer .box a i{
+    color: var(--main-color);
+}
+
+footer .box a:hover{
+    margin-left: 7px;
+
+}
+
+footer h2 span{
+    color: var(--main-color);
+}
+#scroll-top{
+    position: fixed;
+    top:-120%;
+    right:2rem;
+    padding:.4rem 1.5rem;
+    font-size: 4rem;
+    background: #ff3838;
+    color:#fff;
+    border-radius: .5rem;
+    transition: 1s linear;
+    z-index: 1000;
+}
+  #scroll-top.show{
+    top:calc(100% - 10rem);
+  }
+
+
+
+
+
+
+/* media query */
+@media (max-width:991px){
+
+    html{
+       font-size: 55%;
+    }
+ 
+    section{
+       padding:3rem 2rem;
+    }
+    .row_div{
+        display: block;
+        margin: 0;
+
+    }
+    .row_div .image{
+        width: 80%;
+        margin: auto;
+    }
+    footer .box{
+        margin-left: 5px;
+    }
+ }
+@media (max-width:750px){
+    header nav{
+        justify-content: space-between;
+    }
+    #menu-btn{
+        display: inline-block;
+    }
+    header nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--white);
+        top: 70px; right: -100%;
+        text-align: center;
+        padding-top: 0; margin-top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li{
+        margin: 30px 0;
+    }
+    nav ul li a{
+        font-size: 3rem;
+    }
+    nav ul.active{
+        right: 0;
+    }
+    /* ------about qurey--- */
+    .row_div .image{
+        width: 100%;
+    }
+    
+    .quick_links, .extera_links, .contact_info, .follow_us{
+        margin-bottom: 5px;
+    }
+}
